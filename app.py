@@ -50,7 +50,7 @@ chart_data.rename(columns={"Country\year": "country", "value":"emission"}, inpla
 chart_data
 
 #render using altair
-st.text("Heatmap1: With Scheme \"spectral\"")
+st.subheader("Heatmap1: With Scheme \"spectral\"")
 heatmap1 = alt.Chart(chart_data).mark_rect().encode(
     x=alt.X('country:N', title = 'country'),
     y=alt.Y('year:O', title = 'year'),
@@ -61,8 +61,8 @@ heatmap1 = alt.Chart(chart_data).mark_rect().encode(
 st.altair_chart(heatmap1, use_container_width = True)
 
 
-st.text("Heatmap2: With Scheme \"accent\"")
-heatmap1 = alt.Chart(chart_data).mark_rect().encode(
+st.subheader("Heatmap2: With Scheme \"accent\"")
+heatmap2 = alt.Chart(chart_data).mark_rect().encode(
     x=alt.X('country:N', title = 'country'),
     y=alt.Y('year:O', title = 'year'),
     color = alt.Color('emission:Q', scale=alt.Scale(scheme='greenblue')),
