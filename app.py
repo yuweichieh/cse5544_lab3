@@ -54,7 +54,7 @@ st.text("Heatmap1: With Scheme \"spectral\"")
 heatmap1 = alt.Chart(chart_data).mark_rect().encode(
     x=alt.X('country:N', title = 'country'),
     y=alt.Y('year:O', title = 'year'),
-    color = alt.Color('emission:Q', scale=alt.Scale(scheme='spectral'))
+    color = alt.Color('emission:Q', scale=alt.Scale(scheme='spectral')),
     tooltip=['country', 'year', 'emission']
 )
 
@@ -65,7 +65,7 @@ st.text("Heatmap2: With Scheme \"accent\"")
 heatmap1 = alt.Chart(chart_data).mark_rect().encode(
     x=alt.X('country:N', title = 'country'),
     y=alt.Y('year:O', title = 'year'),
-    color = alt.Color('emission:Q', scale=alt.Scale(scheme='greenblue'))
+    color = alt.Color('emission:Q', scale=alt.Scale(scheme='greenblue')),
     tooltip=['country', 'year', 'emission']
 )
 
