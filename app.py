@@ -71,6 +71,3 @@ heatmap2 = alt.Chart(chart_data).mark_rect().encode(
 )
 
 st.altair_chart(heatmap2, use_container_width = True)
-
-st.header("Analysis")
-st.text("I use the Climate Data (same as Lab1 and Lab2) for this lab. And the two schemes I choose are “spectral” and “accent”. Since missing data creates some black blocks in the heatmap, which sometimes makes it difficult to compare the neighbor colors. Therefore, I set those missing data values to 0 and the result is shown as above. And for comparison, I prefer scheme spectral for this dataset. Because OECD rows are significantly larger than others, using accent which only has green and blue is hard to differ those light green colors from other. However, in scheme spectral, you can distinguish those red and orange easier. So I will say spectral is slightly better for me.")
